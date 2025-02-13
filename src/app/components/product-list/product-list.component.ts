@@ -58,7 +58,7 @@ export class ProductListComponent implements OnInit{
     }else {
       // not available
       this.currentCategoryId = 1;
-      this.currentCategoryName = "Books"
+      this.currentCategoryName = "All"
     }
     //check if we have a different category id then reset the page number
     if(this.previousCategoryId != this.currentCategoryId){

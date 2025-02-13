@@ -1,0 +1,7 @@
+{
+  "/api": {
+    "target": "https://dev-85080634.okta.com/oath2/default",
+    "secure": false,
+    "changeOrigin": true
+  }
+}

@@ -1,0 +1,44 @@
+<div mat-button [matMenuTriggerFor]="aboveMenu">
+  <div *ngIf="isAuthenticated && userFullName">
+    {{ userFullName}}
+      </div>
+      <div *ngIf="!isAuthenticated">
+        <mat-icon>account_circle</mat-icon>
+    </div>
+    <mat-menu #aboveMenu="matMenu" yPosition="above">
+      <button mat-menu-item *ngIf="!isAuthenticated" routerLink="/login">
+        Login</button>
+      <button mat-menu-item *ngIf="isAuthenticated" (click)="logout()">
+
+        Logout</button>
+      <button mat-menu-item *ngIf="isAuthenticated" routerLink="/user">My Details</button>
+
+      <button mat-menu-item *ngIf="isAuthenticated" routerLink="/order-history">My Order</button>
+    </mat-menu>
+
+
+
+
+    <!--  <div *ngIf="isAuthenticated && userFullName" class="login-status-user-info">-->
+<!--    Welcome back {{ userFullName}}-->
+<!--  </div>-->
+<!--  <button mat-button *ngIf="!isAuthenticated" routerLink="/login" class="security-btn">-->
+<!--    <mat-icon>account_circle</mat-icon>-->
+<!--    Login-->
+<!--  </button>-->
+<!--  <button mat-button *ngIf="isAuthenticated" (click)="logout()" class="security-btn">-->
+
+<!--    Logout</button>-->
+<!--  <button mat-button *ngIf="isAuthenticated" routerLink="/user" class="security-btn">My Details</button>-->
+<!--  <button mat-button *ngIf="isAuthenticated" routerLink="/order-history" class="security-btn ml-1">My Order</button>-->
+
+
+<!--<div class="login-status-header">-->
+<!--  <div *ngIf="isAuthenticated && userFullName" class="login-status-user-info">-->
+<!--    Welcome back {{ userFullName}}-->
+<!--  </div>-->
+<!--  <button *ngIf="!isAuthenticated" routerLink="/login" class="security-btn">Login</button>-->
+<!--  <button *ngIf="isAuthenticated" (click)="logout()" class="security-btn">Logout</button>-->
+<!--  <button *ngIf="isAuthenticated" routerLink="/user" class="security-btn">My Details</button>-->
+<!--  <button *ngIf="isAuthenticated" routerLink="/order-history" class="security-btn ml-1">My Order</button>-->
+<!--</div>-->

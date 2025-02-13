@@ -4,7 +4,7 @@
   <aside class="menu-sidebar d-none d-lg-block">
     <div class="logo">
       <a routerLink="/products">
-        <img src="assets/images/logo.png" alt="luv2shop" class="img-responsive">
+        <img src="assets/images/logo1.png" alt="IneosQ" class="img-responsive">
       </a>
     </div>
     <app-product-category-menu></app-product-category-menu>
@@ -16,15 +16,26 @@
   <div class="page-container">
     <!-- HEADER DESKTOP-->
     <header class="header-desktop">
-      <div class="section-content section-content-p30">
-        <div class="container-fluid">
-          <div class="header-wrap">
-            <app-search></app-search>
-             <app-cart-status></app-cart-status>
-          </div>
-          <div class="account-wrap"></div>
-        </div>
-      </div>
+
+      <mat-toolbar color="blue">
+        <app-search></app-search>
+        <span class="spacer"></span>
+        <app-login-status></app-login-status>
+        <app-cart-status></app-cart-status>
+
+      </mat-toolbar>
+
+
+<!--      <div class="section-content section-content-p30">-->
+<!--        <div class="container-fluid">-->
+<!--          <div class="header-wrap">-->
+<!--            <app-search></app-search>-->
+<!--            <app-login-status></app-login-status>-->
+<!--             <app-cart-status></app-cart-status>-->
+<!--          </div>-->
+<!--          <div class="account-wrap"></div>-->
+<!--        </div>-->
+<!--      </div>-->
     </header>
     <!-- END HEADER DESKTOP-->
     <!-- MAIN CONTENT-->
